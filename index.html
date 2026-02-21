@@ -1,0 +1,24 @@
+# 进入你的项目目录
+cd ~
+mkdir -p termux_claw && cd termux_claw
+
+# 创建 index.html 网页文件
+cat <<EOF > index.html
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>OpenClaw Service</title></head>
+<body style="text-align:center;padding:50px;">
+    <h1>OpenClaw 机器人已上线</h1>
+    <p>这是我的 Netlify 盈利项目预览页</p>
+    <a href="https://t.me/termux_gemini_agent_bot">点击联系我</a>
+</body>
+</html>
+EOF
+
+# 提交到 GitHub (假设你已经配置过 git)
+git init
+git add index.html
+git commit -m "Add index page"
+git branch -M main
+git remote add origin https://github.com/lixiaochen05/termux_claw.git
+git push -u origin main
